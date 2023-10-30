@@ -10,3 +10,5 @@ steps:
       - --trigger-http
       - --runtime=nodejs20
       - --allow-unauthenticated
+      - --gen2
+      - --entry-point=main

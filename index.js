@@ -4,16 +4,13 @@ const axios = require('axios').create({
     withCredentials: true
 });
 
-functions.http('helloHttp', async (req, res) => {
+functions.http('main', async (req, res) => {
     axios.defaults.headers.common['cookie'] = req.header('cookie')
-    if (req.originalUrl.includes('deviceId')) {
-        const positions = await axios.get(req.originalUrl.replace('combined', 'route')).then(d => d.data)
-        const events = await axios.get(req.originalUrl.replace('combined', 'events')).then(d => d.data)
-        if (Array.isArray(req.query.deviceId)) {
-            req.query.deviceId.forEach(d => {
-            })
-        }
-        res.send({positions, events});
+    console.log(req.header('cookie'), req.originalUrl.replace('combined', 'route'))
+    const positions = await axios.get(req.originalUrl.replace('combined', 'route')).then(d => d.data)
+    const events = await axios.get(req.originalUrl.replace('combined', 'events')).then(d => d.data)
+    if (Array.isArray(req.query.deviceId)) {
+        req.query.deviceId.forEach(() => {})
     }
-    res.status(200).end()
+    res.send({positions, events});
 });
