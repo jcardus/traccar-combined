@@ -15,4 +15,5 @@ functions.http('helloHttp', async (req, res) => {
         }
         res.send({positions, events});
     }
+    res.status(200).end()
 });
