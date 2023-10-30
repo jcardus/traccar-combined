@@ -4,7 +4,7 @@ steps:
       - gcloud
       - functions
       - deploy
-      - traccar-combined
+      - traccar-combined2
       - --region=europe-west1
       - --source=.
       - --trigger-http
