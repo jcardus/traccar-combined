@@ -1,0 +1,24 @@
+{
+  "name": "traccar-combined",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx @google-cloud/functions-framework --target=combined",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcardus/traccar-combined.git"
+  },
+  "author": "jcardus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcardus/traccar-combined/issues"
+  },
+  "homepage": "https://github.com/jcardus/traccar-combined#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "axios": "^1.6.0"
+  }
+}
